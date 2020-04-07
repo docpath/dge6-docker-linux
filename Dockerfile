@@ -5,7 +5,7 @@ RUN mkdir /required_files
 COPY docgenerationpackv6-6.X.Y-java.jar /required_files/
 WORKDIR /required_files
 RUN java -jar docgenerationpackv6-6.X.Y-java.jar -solname"DocPath DocGeneration Engine Pack v6" -install -solution"/usr/local/docpath/generation" -silentmode -console -licserverpath"/usr/local/docpath/licenseserver" -licserverport1765
-COPY DocPath License File.lic /usr/local/docpath/Licenses/
+COPY DocPath_License_File.lic /usr/local/docpath/Licenses/
 COPY run.sh /usr/local/bin/
 RUN chmod 755 /usr/local/bin/run.sh
 COPY Forms /usr/local/docpath/generation/resources/forms/
