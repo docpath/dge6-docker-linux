@@ -1,6 +1,6 @@
 # Docker Configuration Files for DGE6
 
-This is a complete example about how to deploy DocPath ® DocGeneration Engine 6 in Linux using Docker for Linux. The example must be completed with the following files in the same directory as the repositorized files:
+This is a complete example about how to deploy DocPath ® DocGeneration Engine 6 in Linux using Docker. The example must be completed with the following files in the same directory as the repositorized files:
 
 - docgenerationpackv6-6.X.Y-java.jar: DocPath ® DocGeneration Engine 6 Installer.
 - DocPath License File.lic: License file.
@@ -19,3 +19,7 @@ To successfully perform the example follow the steps as indicated below:
 ## Necessary changes
 - Change the docgenerationpackv6-6.X.Y.-java.jar with the corresponding version of DocPath ® DocGeneration Engine 6.
 - Change the DocPath_License_File.lic file with the corresponding license filename.
+
+## How to run the container
+- Build the image using: docker build -t docpath/dge .
+- Run the container using: docker run --name dge --hostname <container_hostname> --detach -p 8084:8084 docpath/dge
